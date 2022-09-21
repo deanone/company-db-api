@@ -78,6 +78,10 @@ public class Employee implements Serializable {
 		return jobTitle;
 	}
 	
+	public void setJobTitle(String jobTitle) {
+		this.jobTitle = jobTitle;
+	}
+	
 	public Date getHireDate() {
 		return hireDate;
 	}
