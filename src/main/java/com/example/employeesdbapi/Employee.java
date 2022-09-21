@@ -34,13 +34,13 @@ public class Employee implements Serializable {
 	private Date hireDate;
 	
 	@Column(name = "yearsOfExperience")
-	private int yearsOfExperience;
+	private Integer yearsOfExperience;
 	
 	@Column(name = "annualSalaryGross")
-	private float annualSalaryGross;
+	private Float annualSalaryGross;
 	
 	@Column(name = "annualSalaryNet")
-	private float annualSalaryNet;
+	private Float annualSalaryNet;
 	
 	public Employee() {
 		
@@ -69,4 +69,28 @@ public class Employee implements Serializable {
 	public String getLastName() {
 		return lastName;
 	}
+	
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+	
+	public String getJobTitle() {
+		return jobTitle;
+	}
+	
+	public Date getHireDate() {
+		return hireDate;
+	}
+	
+	public Integer getYearsOfExperience() {
+		return yearsOfExperience;
+	}
+	
+	public Float getAnnualSalaryGross() {
+		return annualSalaryGross;
+	}
+	
+	public Float getAnnualSalaryNet() {
+		return annualSalaryNet;
+	}	
 }
