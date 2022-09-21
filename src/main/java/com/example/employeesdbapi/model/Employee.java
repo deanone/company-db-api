@@ -1,4 +1,4 @@
-package com.example.employeesdbapi;
+package com.example.employeesdbapi.model;
 
 import java.io.Serializable;
 import java.util.Date;
