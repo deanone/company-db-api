@@ -1,6 +1,6 @@
-# A simple RESTful API for managing a company's data
+# Company RESTful API
 
-This is a RESTful API for managing all data of a company. 
+This is a complete RESTful API for managing all data of a company. 
 
 The data is supposed to be stored in a MySQL database.
 
