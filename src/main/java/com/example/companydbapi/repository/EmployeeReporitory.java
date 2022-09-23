@@ -1,8 +1,8 @@
-package com.example.employeesdbapi.repository;
+package com.example.companydbapi.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.employeesdbapi.model.Employee;
+import com.example.companydbapi.model.Employee;
 
 public interface EmployeeReporitory extends JpaRepository<Employee, Integer> {
 }

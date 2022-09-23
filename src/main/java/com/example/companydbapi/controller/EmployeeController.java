@@ -1,4 +1,4 @@
-package com.example.employeesdbapi.controller;
+package com.example.companydbapi.controller;
 
 import java.util.Optional;
 
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.employeesdbapi.model.Employee;
-import com.example.employeesdbapi.repository.EmployeeReporitory;
+import com.example.companydbapi.model.Employee;
+import com.example.companydbapi.repository.EmployeeReporitory;
 
 @RestController
 @RequestMapping(path = "/api")

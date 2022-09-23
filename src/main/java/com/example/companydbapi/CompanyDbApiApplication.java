@@ -1,13 +1,13 @@
-package com.example.employeesdbapi;
+package com.example.companydbapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EmployeesDbApiApplication {
+public class CompanyDbApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EmployeesDbApiApplication.class, args);
+		SpringApplication.run(CompanyDbApiApplication.class, args);
 	}
 
 }

@@ -9,10 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>employees-db-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>employees-db-api</name>
-	<description>A REST API for accessing an SQL db of employees</description>
+	<name>company-db-api</name>
+	<description>A RESTful API for accessing a MySQL db of a company</description>
 	
 	<properties>
 		<java.version>1.8</java.version>
@@ -61,4 +60,5 @@
 		</plugins>
 	</build>
 
+	<artifactId>company-db-api</artifactId>
 </project>
