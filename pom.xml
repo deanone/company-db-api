@@ -36,6 +36,7 @@
     		<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 		
+		<!-- Spring Boot development tools -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -52,6 +53,7 @@
 
 	<build>
 		<plugins>
+			<!-- Maven integration with Spring Boot -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
