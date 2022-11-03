@@ -1,6 +1,7 @@
 package com.example.companydbapi.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -45,6 +46,8 @@ public class Employee implements Serializable {
 	@Column(name = "annualSalaryNet")
 	private Float annualSalaryNet;
 	
+	private ArrayList<String> skills;
+	
 	public Employee() {
 		
 	}
@@ -59,6 +62,7 @@ public class Employee implements Serializable {
 		this.yearsOfExperience = yearsOfExperience;
 		this.annualSalaryGross = annualSalaryGross;
 		this.annualSalaryNet = annualSalaryNet;
+		this.skills = new ArrayList<String>();
 	}
 	
 	public Integer getId() {
@@ -99,5 +103,9 @@ public class Employee implements Serializable {
 	
 	public Float getAnnualSalaryNet() {
 		return annualSalaryNet;
-	}	
+	}
+	
+	public void addSkill(String skill) {
+		skills.add(skill);
+	}
 }
