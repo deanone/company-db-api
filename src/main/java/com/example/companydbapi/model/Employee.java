@@ -46,6 +46,9 @@ public class Employee implements Serializable {
 	@Column(name = "annualSalaryNet")
 	private Float annualSalaryNet;
 	
+	@Column(name = "building")
+	private String building;
+	
 	private ArrayList<String> skills;
 	
 	public Employee() {
@@ -103,6 +106,10 @@ public class Employee implements Serializable {
 	
 	public Float getAnnualSalaryNet() {
 		return annualSalaryNet;
+	}
+	
+	public String getBuilding() {
+		return building;
 	}
 	
 	public void addSkill(String skill) {
