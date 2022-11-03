@@ -49,6 +49,9 @@ public class Employee implements Serializable {
 	@Column(name = "building")
 	private String building;
 	
+	@Column(name = "office")
+	private String office;
+	
 	private ArrayList<String> skills;
 	
 	public Employee() {
@@ -110,6 +113,10 @@ public class Employee implements Serializable {
 	
 	public String getBuilding() {
 		return building;
+	}
+	
+	public String getOffice() {
+		return office;
 	}
 	
 	public void addSkill(String skill) {
