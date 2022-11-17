@@ -1,13 +1,11 @@
 package com.example.companydbapi.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -18,9 +16,9 @@ public class Employee implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue
 	@Column(name = "id")
-	private Integer id;
+	private Long id;
 	
 	@Column(name = "firstName")
 	private String firstName;
@@ -52,14 +50,15 @@ public class Employee implements Serializable {
 	@Column(name = "office")
 	private String office;
 	
-	private ArrayList<String> skills;
+	//private ArrayList<String> skills;
 	
+	// a default constructor is required from JPA
 	public Employee() {
-		
 	}
 	
-	public Employee(String firstName, String lastName, Date dateOfBirth, String jobTitle, Date hireDate, int yearsOfExperience, 
-			float annualSalaryGross, float annualSalaryNet) {
+	public Employee(String firstName, String lastName, Date dateOfBirth,
+			String jobTitle, Date hireDate, int yearsOfExperience, 
+		float annualSalaryGross, float annualSalaryNet) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.dateOfBirth = dateOfBirth;
@@ -68,58 +67,94 @@ public class Employee implements Serializable {
 		this.yearsOfExperience = yearsOfExperience;
 		this.annualSalaryGross = annualSalaryGross;
 		this.annualSalaryNet = annualSalaryNet;
-		this.skills = new ArrayList<String>();
+		//this.skills = new ArrayList<String>();
 	}
 	
-	public Integer getId() {
+	public Long getId() {
 		return id;
+	}
+	
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 	
 	public String getFirstName() {
 		return firstName;
 	}
 	
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
 	public String getLastName() {
 		return lastName;
+	}
+	
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 	
 	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
 	
+	public void setJobTitle(String jobTitle) {
+		this.jobTitle = jobTitle;
+	}
+	
 	public String getJobTitle() {
 		return jobTitle;
 	}
 	
-	public void setJobTitle(String jobTitle) {
-		this.jobTitle = jobTitle;
+	public void setHireDate(Date hireDate) {
+		this.hireDate = hireDate;
 	}
 	
 	public Date getHireDate() {
 		return hireDate;
 	}
 	
+	public void setYearsOfExperience(Integer yearsOfExperience) {
+		this.yearsOfExperience = yearsOfExperience;
+	}
+	
 	public Integer getYearsOfExperience() {
 		return yearsOfExperience;
+	}
+	
+	public void setAnnualSalaryGross(Float annualSalaryGross) {
+		this.annualSalaryGross = annualSalaryGross;
 	}
 	
 	public Float getAnnualSalaryGross() {
 		return annualSalaryGross;
 	}
 	
+	public void setAnnualSalaryNet(Float annualSalaryNet) {
+		this.annualSalaryNet = annualSalaryNet;
+	}
+	
 	public Float getAnnualSalaryNet() {
 		return annualSalaryNet;
+	}
+	
+	public void setBuilding(String building) {
+		this.building = building;
 	}
 	
 	public String getBuilding() {
 		return building;
 	}
 	
+	public void setOffice(String office) {
+		this.office = office;
+	}
+	
 	public String getOffice() {
 		return office;
 	}
 	
-	public void addSkill(String skill) {
-		skills.add(skill);
-	}
+//	public void addSkill(String skill) {
+//		skills.add(skill);
+//	}
 }
