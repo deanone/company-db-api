@@ -1,19 +1,15 @@
 package com.example.companydbapi.model;
 
 import java.util.Date;
+import java.text.SimpleDateFormat; 
 
 import javax.persistence.EntityManager;
-
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;  
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class EmployeeTest {
 	
@@ -77,5 +73,16 @@ class EmployeeTest {
 		Employee fetchedEmployee = entityManager.find(Employee.class, 1);
 		
 		assertEquals("Software Engineer", fetchedEmployee.getJobTitle());
+	}
+	
+	@Test
+	void persist_hireDate__test() {
+		EntityManager entityManager = mock(EntityManager.class);
+		
+		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
+		
+		Employee fetchedEmployee = entityManager.find(Employee.class, 1);
+		
+		assertEquals("01/01/2021", fetchedEmployee.getHireDateString());
 	}
 }

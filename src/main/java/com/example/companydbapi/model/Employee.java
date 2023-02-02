@@ -106,6 +106,11 @@ public class Employee implements Serializable {
 		return hireDate;
 	}
 	
+	public String getHireDateString() {
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		return dateFormat.format(hireDate);
+	}
+	
 	public Integer getYearsOfExperience() {
 		return yearsOfExperience;
 	}
