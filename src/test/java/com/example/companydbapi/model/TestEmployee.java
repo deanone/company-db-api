@@ -57,4 +57,15 @@ class EmployeeTest {
 		
 		assertEquals("Footer", fetchedEmployee.getLastName());
 	}
+	
+	@Test
+	void persist_dateOfBirth__test() {
+		EntityManager entityManager = mock(EntityManager.class);
+		
+		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
+		
+		Employee fetchedEmployee = entityManager.find(Employee.class, 1);
+		
+		assertEquals("01/01/2000", fetchedEmployee.getDateOfBirthString());
+	}
 }

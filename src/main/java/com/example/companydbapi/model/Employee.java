@@ -3,6 +3,8 @@ package com.example.companydbapi.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -85,6 +87,11 @@ public class Employee implements Serializable {
 	
 	public Date getDateOfBirth() {
 		return dateOfBirth;
+	}
+	
+	public String getDateOfBirthString() {
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		return dateFormat.format(dateOfBirth);
 	}
 	
 	public String getJobTitle() {
