@@ -96,4 +96,15 @@ class EmployeeTest {
 		
 		assertEquals(2, fetchedEmployee.getYearsOfExperience());
 	}
+	
+	@Test
+	void persist_annualSalaryGross__test() {
+		EntityManager entityManager = mock(EntityManager.class);
+		
+		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
+		
+		Employee fetchedEmployee = entityManager.find(Employee.class, 1);
+		
+		assertEquals(10000.0f, fetchedEmployee.getAnnualSalaryGross());
+	}
 }
