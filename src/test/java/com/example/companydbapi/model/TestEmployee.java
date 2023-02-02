@@ -23,8 +23,7 @@ class EmployeeTest {
 	void setup() throws Exception {
 		String firstName = "Foo";
 		String lastName = "Footer";
-		Date dateOfBirth;
-		dateOfBirth = new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2000");
+		Date dateOfBirth = new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2000");
 		String jobTitle = "Software Engineer";
 		Date hireDate = new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2021");
 		int yearsOfExperience = 2;
@@ -67,5 +66,16 @@ class EmployeeTest {
 		Employee fetchedEmployee = entityManager.find(Employee.class, 1);
 		
 		assertEquals("01/01/2000", fetchedEmployee.getDateOfBirthString());
+	}
+	
+	@Test
+	void persist_jobTitle__test() {
+		EntityManager entityManager = mock(EntityManager.class);
+		
+		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
+		
+		Employee fetchedEmployee = entityManager.find(Employee.class, 1);
+		
+		assertEquals("Software Engineer", fetchedEmployee.getJobTitle());
 	}
 }
