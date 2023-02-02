@@ -1,5 +1,6 @@
 package com.example.companydbapi.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class EmployeeController {
 	private EmployeeReporitory employeeRepository;
 	
 	@GetMapping("/employees")
-	public Iterable<Employee> getAllEmployees() {
+	public List<Employee> getAllEmployees() {
 		return employeeRepository.findAll();
 	}
 	

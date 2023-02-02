@@ -12,12 +12,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class EmployeeTestSuite {
+public class EmployeeTest {
 	
 	Employee employee;
 	
 	@BeforeEach
-	void setup() throws Exception {
+	public void setup() throws Exception {
 		String firstName = "Foo";
 		String lastName = "Footer";
 		Date dateOfBirth = new SimpleDateFormat("dd/MM/yyyy").parse("01/01/2000");
@@ -33,7 +33,7 @@ class EmployeeTestSuite {
 	}
 
 	@Test
-	void persist_firstName__test() {
+	public void persist_firstName__test() {
 		EntityManager entityManager = mock(EntityManager.class);
 		
 		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
@@ -44,7 +44,7 @@ class EmployeeTestSuite {
 	}
 	
 	@Test
-	void persist_lastName__test() {
+	public void persist_lastName__test() {
 		EntityManager entityManager = mock(EntityManager.class);
 		
 		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
@@ -55,7 +55,7 @@ class EmployeeTestSuite {
 	}
 	
 	@Test
-	void persist_dateOfBirth__test() {
+	public void persist_dateOfBirth__test() {
 		EntityManager entityManager = mock(EntityManager.class);
 		
 		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
@@ -66,7 +66,7 @@ class EmployeeTestSuite {
 	}
 	
 	@Test
-	void persist_jobTitle__test() {
+	public void persist_jobTitle__test() {
 		EntityManager entityManager = mock(EntityManager.class);
 		
 		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
@@ -77,7 +77,7 @@ class EmployeeTestSuite {
 	}
 	
 	@Test
-	void persist_hireDate__test() {
+	public void persist_hireDate__test() {
 		EntityManager entityManager = mock(EntityManager.class);
 		
 		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
@@ -88,7 +88,7 @@ class EmployeeTestSuite {
 	}
 	
 	@Test
-	void persist_yearsOfExperience__test() {
+	public void persist_yearsOfExperience__test() {
 		EntityManager entityManager = mock(EntityManager.class);
 		
 		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
@@ -99,7 +99,7 @@ class EmployeeTestSuite {
 	}
 	
 	@Test
-	void persist_annualSalaryGross__test() {
+	public void persist_annualSalaryGross__test() {
 		EntityManager entityManager = mock(EntityManager.class);
 		
 		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
@@ -110,7 +110,7 @@ class EmployeeTestSuite {
 	}
 	
 	@Test
-	void persist_annualSalaryNet__test() {
+	public void persist_annualSalaryNet__test() {
 		EntityManager entityManager = mock(EntityManager.class);
 		
 		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
