@@ -37,8 +37,7 @@ class EmployeeTest {
 	}
 
 	@Test
-	void persist_after_generation_test() {
-		
+	void persist_firstName__test() {
 		EntityManager entityManager = mock(EntityManager.class);
 		
 		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
@@ -46,6 +45,16 @@ class EmployeeTest {
 		Employee fetchedEmployee = entityManager.find(Employee.class, 1);
 		
 		assertEquals("Foo", fetchedEmployee.getFirstName());
+	}
+	
+	@Test
+	void persist_lastName__test() {
+		EntityManager entityManager = mock(EntityManager.class);
 		
+		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
+		
+		Employee fetchedEmployee = entityManager.find(Employee.class, 1);
+		
+		assertEquals("Footer", fetchedEmployee.getLastName());
 	}
 }
