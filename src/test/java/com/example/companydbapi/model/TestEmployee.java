@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.persistence.EntityManager;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
@@ -17,10 +18,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class EmployeeTest {
 	
 	Employee employee;
-
-	@Test
-	void persist_after_generation_test() throws Exception {
-		
+	
+	@BeforeEach
+	void setup() throws Exception {
 		String firstName = "Foo";
 		String lastName = "Footer";
 		Date dateOfBirth;
@@ -34,11 +34,14 @@ class EmployeeTest {
 		employee = new Employee(firstName, lastName, dateOfBirth, jobTitle, 
                 hireDate, yearsOfExperience, 
                 annualSalaryGross, annualSalaryNet);
+	}
+
+	@Test
+	void persist_after_generation_test() {
 		
 		EntityManager entityManager = mock(EntityManager.class);
 		
 		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
-		
 		
 		Employee fetchedEmployee = entityManager.find(Employee.class, 1);
 		
