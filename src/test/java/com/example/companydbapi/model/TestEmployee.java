@@ -7,11 +7,12 @@ import javax.persistence.EntityManager;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class EmployeeTest {
+class EmployeeTestSuite {
 	
 	Employee employee;
 	
@@ -27,8 +28,8 @@ class EmployeeTest {
 		float annualSalaryNet = 7000.0f;
 		
 		employee = new Employee(firstName, lastName, dateOfBirth, jobTitle, 
-                hireDate, yearsOfExperience, 
-                annualSalaryGross, annualSalaryNet);
+                                hireDate, yearsOfExperience, 
+                                annualSalaryGross, annualSalaryNet);
 	}
 
 	@Test
