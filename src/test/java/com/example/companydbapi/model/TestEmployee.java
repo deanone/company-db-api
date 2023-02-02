@@ -85,4 +85,15 @@ class EmployeeTest {
 		
 		assertEquals("01/01/2021", fetchedEmployee.getHireDateString());
 	}
+	
+	@Test
+	void persist_yearsOfExperience__test() {
+		EntityManager entityManager = mock(EntityManager.class);
+		
+		when(entityManager.find(Employee.class, 1)).thenReturn(employee);
+		
+		Employee fetchedEmployee = entityManager.find(Employee.class, 1);
+		
+		assertEquals(2, fetchedEmployee.getYearsOfExperience());
+	}
 }
