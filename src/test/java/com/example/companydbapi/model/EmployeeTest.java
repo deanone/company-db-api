@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 
 public class EmployeeTest {
 	
-	Employee employee;
+	private Employee employee;
 	
 	@BeforeEach
 	public void setup() throws Exception {
