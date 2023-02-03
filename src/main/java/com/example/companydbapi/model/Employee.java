@@ -22,7 +22,7 @@ public class Employee implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
-	private Integer id;
+	private Long id;
 	
 	@Column(name = "firstName")
 	private String firstName;
@@ -57,11 +57,11 @@ public class Employee implements Serializable {
 	private ArrayList<String> skills;
 	
 	public Employee() {
-		
 	}
 	
-	public Employee(String firstName, String lastName, Date dateOfBirth, String jobTitle, Date hireDate, int yearsOfExperience, 
-			float annualSalaryGross, float annualSalaryNet) {
+	public Employee(String firstName, String lastName, Date dateOfBirth,
+			        String jobTitle, Date hireDate, int yearsOfExperience, 
+			        float annualSalaryGross, float annualSalaryNet) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.dateOfBirth = dateOfBirth;
@@ -73,7 +73,7 @@ public class Employee implements Serializable {
 		this.skills = new ArrayList<String>();
 	}
 	
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 	
